@@ -1,0 +1,7 @@
+Host digitalocean
+  Hostname 11.22.33.44 # your droplet ip
+  Port 22 # change it to yours
+  User root
+  IdentityFile ~/.ssh/yourprivatekey
+  ServerAliveInterval 5 # checks every 5 seconds if the connection is still alive
+  ServerAliveCountMax 1 # if after 1x5seconds the connection is not alive, kill it
