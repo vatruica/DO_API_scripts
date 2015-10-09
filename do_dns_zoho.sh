@@ -11,7 +11,7 @@ domainName="testing.co" # change to your domain
 # zoho vars
 zohoMX="mx.zoho.com."
 zohoMX2="mx2.zoho.com."
-zohoCNAME="zb14420523" # the verification code supplied by zoho
+zohoCNAME="somedigits" # the verification code supplied by zoho
 zohoCNAMEdata="zmverify.zoho.com."
 zohoSPFName="@"
 zohoSPFData="v=spf1 mx include:zoho.com ~all"
