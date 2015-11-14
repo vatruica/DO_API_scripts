@@ -11,6 +11,7 @@ domainName="testing.co" # change to your domain
 # zoho vars
 zohoMX="mx.zoho.com."
 zohoMX2="mx2.zoho.com."
+zohoMX3="mx3.zoho.com."
 zohoCNAME="somedigits" # the verification code supplied by zoho
 zohoCNAMEdata="zmverify.zoho.com."
 zohoSPFName="@"
@@ -29,6 +30,11 @@ echo $addMXRecord
 echo ""
 
 addMXRecord2=$(curl -X POST -H 'Content-Type: application/json' -H "Authorization: Bearer $TOKEN" -d "{\"type\":\"MX\",\"name\":\"\",\"data\":\"$zohoMX2\",\"priority\":\"20\",\"port\":null,\"weight\":null}" "$BASEAPIURL/domains/$domainName/records")
+echo "Adding an MX record"
+echo $addMXRecord
+echo ""
+
+addMXRecord3=$(curl -X POST -H 'Content-Type: application/json' -H "Authorization: Bearer $TOKEN" -d "{\"type\":\"MX\",\"name\":\"\",\"data\":\"$zohoMX3\",\"priority\":\"50\",\"port\":null,\"weight\":null}" "$BASEAPIURL/domains/$domainName/records")
 echo "Adding an MX record"
 echo $addMXRecord
 echo ""
